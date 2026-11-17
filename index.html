@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="J.D. Visnardi – Odontologia e Estética na Vila Matilde, SP. Lentes de contato dental, clareamento, implantes e clínica geral com tecnologia e precisão. CROSP 029376." />
+  <title>J.D. Visnardi – Odontologia e Estética | Vila Matilde, SP</title>
+
+  <!-- Favicon oficial da marca -->
+  <link rel="icon" href="logo.png" type="image/png" />
+
+  <!-- Tipografia Premium: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       1. HEADER FIXO
+  ========================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="J.D. Visnardi – Página Inicial">
+        <img src="logo.png" alt="Logo J.D. Visnardi – Odontologia e Estética" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">J.D. Visnardi</span>
+          <span class="brand-tagline">Odontologia e Estética</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação Principal">
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#especialidades" class="nav-link">Especialidades</a>
+        <a href="#agendamento" class="nav-link">Agendamento</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#localizacao" class="nav-link">Localização</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#agendamento" class="btn btn-gold btn-sm">Agendar Consulta</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         2. HERO SECTION (LAYOUT FLUIDO + CARD DO CONSULTÓRIO)
+    ========================================================== -->
+    <section class="hero" id="inicio">
+      <div class="hero-fluid-wrapper">
+        <!-- Coluna Esquerda: Apresentação, CROSP, CTAs e Prova Social -->
+        <div class="hero-content">
+          <div class="cro-badge">
+            <span class="cro-dot"></span>
+            <span>CROSP 029376</span>
+          </div>
+
+          <h1 class="hero-title">
+            Odontologia de precisão e <em>estética do sorriso</em> desenhadas para a sua naturalidade.
+          </h1>
+
+          <p class="hero-subtitle">
+            Protocolos clínicos personalizados, planejamento digital e atendimento humanizado no coração da Vila Matilde. Cuidamos da saúde e da harmonia do seu sorriso em cada detalhe.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#agendamento" class="btn btn-gold">
+              <span>Agendar Avaliação</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="#especialidades" class="btn btn-outline-gold">Conhecer Tratamentos</a>
+          </div>
+
+          <div class="hero-social-proof">
+            <div class="google-pill">
+              <div class="stars" aria-label="Avaliação 4,9 de 5 estrelas">★★★★★</div>
+              <div class="rating-info">
+                <strong>4,9 ★ no Google</strong>
+                <span>Excelência reconhecida pelos nossos pacientes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna Direita: Foto Real do Consultório + Rodapé Embutido -->
+        <div class="hero-media">
+          <figure class="clinic-card">
+            <div class="clinic-image-frame">
+              <img
+                src="consultorio.png"
+                alt="Fachada e estrutura moderna da clínica J.D. Visnardi – Odontologia e Estética na Vila Matilde"
+                class="clinic-photo"
+              />
+            </div>
+            <figcaption class="clinic-card-footer">
+              <p class="clinic-address">📍 R. 29 de Outubro, 499 – Vila Matilde</p>
+              <span class="clinic-caption">ESTRUTURA MODERNA E ACONCHEGANTE</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. SEÇÃO DE ESPECIALIDADES (FUNDO OFF-WHITE #FAFAFA)
+    ========================================================== -->
+    <section class="section section-light" id="especialidades">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Excelência Clínica & Estética</span>
+          <h2 class="section-title">Especialidades pensadas para transformar o seu sorriso</h2>
+          <p class="section-desc">
+            Combinamos materiais de alta performance, técnicas minimamente invasivas e diagnóstico preciso para entregar resultados duradouros e harmônicos.
+          </p>
+        </div>
+
+        <div class="specialties-grid">
+          <!-- Card 1: Lentes de Contato -->
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3L12 3z"/>
+              </svg>
+            </div>
+            <h3 class="specialty-title">Lentes de Contato Dental</h3>
+            <p class="specialty-text">
+              Laminados ultrafinos em porcelana confeccionados sob medida para corrigir formato, cor e alinhamento com máxima naturalidade e preservação dental.
+            </p>
+            <ul class="specialty-highlights">
+              <li>Planejamento estético individualizado</li>
+              <li>Textura e translucidez naturais</li>
+            </ul>
+            <button type="button" class="specialty-link" data-select-procedure="Lentes de Contato Dental">
+              Agendar avaliação <span>→</span>
+            </button>
+          </article>
+
+          <!-- Card 2: Clareamento -->
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+              </svg>
+            </div>
+            <h3 class="specialty-title">Clareamento Dental</h3>
+            <p class="specialty-text">
+              Protocolos combinados (consultório e supervisionado) com agentes dessensibilizantes que devolvem luminosidade ao sorriso com segurança e conforto.
+            </p>
+            <ul class="specialty-highlights">
+              <li>Controle rigoroso de sensibilidade</li>
+              <li>Brilho uniforme e duradouro</li>
+            </ul>
+            <button type="button" class="specialty-link" data-select-procedure="Clareamento Dental">
+              Agendar avaliação <span>→</span>
+            </button>
+          </article>
+
+          <!-- Card 3: Implantes -->
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 3h10l-1 6H8L7 3z"/>
+                <path d="M9 9v3l3 2 3-2V9"/>
+                <path d="M9.5 14v2.5L12 18l2.5-1.5V14"/>
+                <path d="M10.5 18v2l1.5 1 1.5-1v-2"/>
+              </svg>
+            </div>
+            <h3 class="specialty-title">Implantes Dentários</h3>
+            <p class="specialty-text">
+              Reabilitação oral de alta precisão para repor dentes ausentes com estabilidade, função mastigatória plena e estética indistinguível dos dentes naturais.
+            </p>
+            <ul class="specialty-highlights">
+              <li>Implantes biocompatíveis de ponta</li>
+              <li>Conforto e segurança mastigatória</li>
+            </ul>
+            <button type="button" class="specialty-link" data-select-procedure="Implantes Dentários">
+              Agendar avaliação <span>→</span>
+            </button>
+          </article>
+
+          <!-- Card 4: Clínica Geral -->
+          <article class="specialty-card">
+            <div class="specialty-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="specialty-title">Clínica Geral & Prevenção</h3>
+            <p class="specialty-text">
+              Acompanhamento preventivo completo, profilaxia ultrassônica, restaurações estéticas em resina composta e manutenção periódica da saúde bucal.
+            </p>
+            <ul class="specialty-highlights">
+              <li>Check-up preventivo detalhado</li>
+              <li>Restaurações imperceptíveis</li>
+            </ul>
+            <button type="button" class="specialty-link" data-select-procedure="Clínica Geral">
+              Agendar avaliação <span>→</span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. MÓDULO INTERATIVO DE AGENDAMENTO (FUNDO #111111)
+    ========================================================== -->
+    <section class="section section-dark" id="agendamento">
+      <div class="container">
+        <div class="section-header section-header-light">
+          <span class="section-eyebrow">Agenda Online Exclusiva</span>
+          <h2 class="section-title">Reserve seu horário com praticidade</h2>
+          <p class="section-desc">
+            Selecione o procedimento desejado, escolha um dia útil (segunda a sexta) e visualize em tempo real os horários disponíveis das 09h00 às 18h30.
+          </p>
+        </div>
+
+        <div class="booking-widget">
+          <form id="bookingForm" class="booking-grid" novalidate>
+            <!-- Coluna 1: Procedimento & Data -->
+            <div class="booking-step">
+              <div class="step-label">
+                <span class="step-number">01</span>
+                <h3>Escolha o Procedimento</h3>
+              </div>
+
+              <div class="procedure-options" role="radiogroup" aria-label="Procedimento odontológico">
+                <label class="procedure-pill">
+                  <input type="radio" name="procedure" value="Lentes de Contato Dental" checked />
+                  <span>Lentes de Contato</span>
+                </label>
+                <label class="procedure-pill">
+                  <input type="radio" name="procedure" value="Clareamento Dental" />
+                  <span>Clareamento</span>
+                </label>
+                <label class="procedure-pill">
+                  <input type="radio" name="procedure" value="Implantes Dentários" />
+                  <span>Implantes</span>
+                </label>
+                <label class="procedure-pill">
+                  <input type="radio" name="procedure" value="Clínica Geral" />
+                  <span>Clínica Geral</span>
+                </label>
+              </div>
+
+              <div class="step-label mt-24">
+                <span class="step-number">02</span>
+                <h3>Data do Atendimento <small>(Seg a Sex)</small></h3>
+              </div>
+
+              <!-- Carrossel rápido de próximos dias úteis -->
+              <div class="weekday-pills" id="weekdayPills" aria-label="Próximos dias úteis"></div>
+
+              <!-- Seletor de data calendário -->
+              <div class="date-input-row">
+                <label for="bookingDate" class="sr-only">Ou selecione outra data (Segunda a Sexta)</label>
+                <input type="date" id="bookingDate" name="bookingDate" class="form-control" required />
+                <span class="date-helper" id="dateHelperText">Atendimento de segunda a sexta-feira</span>
+              </div>
+            </div>
+
+            <!-- Coluna 2: Grade de Horários -->
+            <div class="booking-step">
+              <div class="step-label">
+                <span class="step-number">03</span>
+                <h3>Horários Disponíveis <small>(09h00 às 18h30)</small></h3>
+              </div>
+
+              <div class="slots-legend">
+                <span><i class="dot-available"></i> Livre</span>
+                <span><i class="dot-selected"></i> Selecionado</span>
+                <span><i class="dot-occupied"></i> Ocupado</span>
+              </div>
+
+              <div class="time-slots-grid" id="timeSlotsGrid" role="radiogroup" aria-label="Horários disponíveis">
+                <!-- Preenchido dinamicamente via JavaScript -->
+              </div>
+            </div>
+
+            <!-- Coluna 3: Dados do Paciente & Confirmação -->
+            <div class="booking-step booking-summary-box">
+              <div class="step-label">
+                <span class="step-number">04</span>
+                <h3>Seus Dados para Confirmação</h3>
+              </div>
+
+              <div class="form-group">
+                <label for="patientName">Nome completo</label>
+                <input
+                  type="text"
+                  id="patientName"
+                  name="patientName"
+                  class="form-control"
+                  placeholder="Ex: Mariana Oliveira"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="patientPhone">WhatsApp para retorno</label>
+                <input
+                  type="tel"
+                  id="patientPhone"
+                  name="patientPhone"
+                  class="form-control"
+                  placeholder="(11) 99999-9999"
+                  maxlength="15"
+                  required
+                />
+              </div>
+
+              <div class="live-summary" id="liveSummary">
+                <div class="summary-row">
+                  <span>Especialidade:</span>
+                  <strong id="summaryProcedure">Lentes de Contato Dental</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Data:</span>
+                  <strong id="summaryDate">—</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Horário:</span>
+                  <strong id="summaryTime">Selecione um horário</strong>
+                </div>
+              </div>
+
+              <p class="form-feedback" id="formFeedback" role="alert"></p>
+
+              <button type="submit" class="btn btn-gold btn-full">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Solicitar Agendamento via WhatsApp</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. PROVA SOCIAL / DEPOIMENTOS (FUNDO OFF-WHITE #FAFAFA)
+    ========================================================== -->
+    <section class="section section-light" id="depoimentos">
+      <div class="container">
+        <div class="reviews-header-bar">
+          <div>
+            <span class="section-eyebrow">Confiança & Resultados Reais</span>
+            <h2 class="section-title">O que dizem nossos pacientes</h2>
+          </div>
+
+          <div class="google-score-card">
+            <div class="score-number">4,9</div>
+            <div class="score-details">
+              <div class="stars">★★★★★</div>
+              <p>Nota média no <strong>Google Reviews</strong></p>
+              <span>Atendimento 5 estrelas na Vila Matilde</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="stars">★★★★★</div>
+              <span class="verified-badge">Avaliação Google</span>
+            </div>
+            <p class="testimonial-quote">
+              “Fiz minhas lentes de contato dental na J.D. Visnardi e o resultado ficou extremamente natural. O consultório na Vila Matilde é impecável, moderno e muito acolhedor.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CS</div>
+              <div>
+                <strong>Camila Santana</strong>
+                <span>Lentes de Contato Dental</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="stars">★★★★★</div>
+              <span class="verified-badge">Avaliação Google</span>
+            </div>
+            <p class="testimonial-quote">
+              “Atendimento pontual, cuidadoso e transparente desde a primeira avaliação. Realizei clareamento e manutenção preventiva sem nenhuma sensibilidade. Recomendo de olhos fechados.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">RM</div>
+              <div>
+                <strong>Rafael Mendes</strong>
+                <span>Clareamento & Clínica Geral</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-top">
+              <div class="stars">★★★★★</div>
+              <span class="verified-badge">Avaliação Google</span>
+            </div>
+            <p class="testimonial-quote">
+              “Tinha muito receio de procedimentos odontológicos, mas toda a equipe me passou total tranquilidade no meu tratamento com implantes. Nota 4,9 no Google mais que merecida!”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AP</div>
+              <div>
+                <strong>Adriana Pires</strong>
+                <span>Implantes Dentários</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. LOCALIZAÇÃO E RODAPÉ (FUNDO PRETO FOSCO #111111)
+    ========================================================== -->
+    <section class="section section-dark location-section" id="localizacao">
+      <div class="container">
+        <div class="location-grid">
+          <div class="location-info">
+            <span class="section-eyebrow">Onde Estamos</span>
+            <h2 class="section-title">Visite nosso consultório na Vila Matilde</h2>
+            <p class="location-desc">
+              Ambiente planejado para proporcionar conforto, privacidade e fácil acesso na Zona Leste de São Paulo.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon">📍</span>
+                <div>
+                  <strong>Endereço</strong>
+                  <p>R. 29 de Outubro, 499 – Vila Matilde, São Paulo – SP</p>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon">🕒</span>
+                <div>
+                  <strong>Horário de Atendimento</strong>
+                  <p>Segunda a Sexta-feira: 09h00 às 18h30</p>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon">📱</span>
+                <div>
+                  <strong>Contato & WhatsApp</strong>
+                  <p><a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">(11) 99999-9999</a></p>
+                </div>
+              </li>
+              <li>
+                <span class="contact-icon">🏛️</span>
+                <div>
+                  <strong>Registro Profissional</strong>
+                  <p>CROSP 029376 • J.D. Visnardi – Odontologia e Estética</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="social-links">
+              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp J.D. Visnardi">
+                WhatsApp
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram J.D. Visnardi">
+                Instagram
+              </a>
+              <a href="https://maps.google.com/?q=R.+29+de+Outubro,+499+-+Vila+Matilde,+São+Paulo+-+SP" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Abrir rota no Google Maps">
+                Como Chegar
+              </a>
+            </div>
+          </div>
+
+          <div class="map-wrapper">
+            <iframe
+              title="Mapa de localização J.D. Visnardi – R. 29 de Outubro, 499 – Vila Matilde, SP"
+              src="https://maps.google.com/maps?q=R.%2029%20de%20Outubro,%20499%20-%20Vila%20Matilde,%20S%C3%A3o%20Paulo%20-%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Logo J.D. Visnardi" class="footer-logo" />
+        <div>
+          <strong>J.D. Visnardi – Odontologia e Estética</strong>
+          <span>CROSP 029376 • R. 29 de Outubro, 499 – Vila Matilde, SP</span>
+        </div>
+      </div>
+
+      <p class="footer-copy">
+        © <span id="currentYear"></span> J.D. Visnardi – Odontologia e Estética. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       TOAST INTERATIVO DE NOTIFICAÇÃO WHATSAPP
+  ========================================================== -->
+  <div class="whatsapp-toast" id="whatsappToast" role="status" aria-live="polite" hidden>
+    <div class="toast-header">
+      <div class="toast-wa-badge">
+        <span class="wa-dot"></span>
+        <strong>Pré-agendamento enviado via WhatsApp</strong>
+      </div>
+      <button type="button" class="toast-close" id="closeToastBtn" aria-label="Fechar notificação">×</button>
+    </div>
+
+    <div class="toast-body">
+      <p class="toast-recipient">Para: <strong>J.D. Visnardi – Recepção</strong></p>
+      <div class="toast-bubble" id="toastMessagePreview"></div>
+      <div class="toast-meta">
+        <span>Notificação simulada no sistema</span>
+        <span class="wa-checks">✓✓ Agora</span>
+      </div>
+    </div>
+
+    <div class="toast-footer">
+      <a href="#" id="realWhatsappLink" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm btn-full">
+        Abrir conversa real no WhatsApp
+      </a>
+    </div>
+    <div class="toast-progress" id="toastProgress"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
