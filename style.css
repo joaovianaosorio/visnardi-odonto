@@ -31,7 +31,7 @@
 }
 
 /* ==========================================================================
-   RESET & BASE
+   RESET & BASE (COM TRAVA DE LARGURA PARA EVITAR SCROLL HORIZONTAL)
    ========================================================================== */
 *,
 *::before,
@@ -44,18 +44,26 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-height);
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-dark);
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: var(--font-sans);
   background-color: var(--bg-dark);
   color: var(--text-light);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
-img {
+img,
+iframe,
+svg {
   max-width: 100%;
   display: block;
 }
@@ -143,10 +151,11 @@ input {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: var(--header-height);
   z-index: 1000;
-  background: rgba(17, 17, 17, 0.92);
+  background: rgba(17, 17, 17, 0.94);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(212, 175, 55, 0.18);
   transition: background var(--transition), box-shadow var(--transition);
@@ -162,25 +171,28 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .brand-logo {
   height: 44px;
   width: auto;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
+  min-width: 0;
 }
 
 .brand-name {
@@ -189,6 +201,7 @@ input {
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--text-light);
+  white-space: nowrap;
 }
 
 .brand-tagline {
@@ -196,6 +209,7 @@ input {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--gold);
+  white-space: nowrap;
 }
 
 .main-nav {
@@ -237,7 +251,8 @@ input {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .mobile-menu-btn {
@@ -245,12 +260,12 @@ input {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   background: transparent;
   border: 1px solid var(--gold-border);
   border-radius: 6px;
-  padding: 8px;
+  padding: 9px;
   cursor: pointer;
 }
 
@@ -263,7 +278,7 @@ input {
 }
 
 /* ==========================================================================
-   2. HERO SECTION (TEXTO PRÓXIMO À ESQUERDA + CARD MAIS ALTO E ESTREITO)
+   2. HERO SECTION
    ========================================================================== */
 .hero {
   padding-top: var(--header-height);
@@ -281,11 +296,15 @@ input {
   padding-left: clamp(24px, 4.5vw, 64px);
   padding-right: clamp(24px, 4.5vw, 64px);
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   align-items: center;
   gap: 40px;
   padding-top: 24px;
   padding-bottom: 24px;
+}
+
+.hero-content {
+  min-width: 0;
 }
 
 .cro-badge {
@@ -309,15 +328,17 @@ input {
   border-radius: 50%;
   background: var(--gold);
   box-shadow: 0 0 10px var(--gold);
+  flex-shrink: 0;
 }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.45rem, 3.8vw, 3.65rem);
+  font-size: clamp(2rem, 3.8vw, 3.65rem);
   font-weight: 600;
-  line-height: 1.1;
+  line-height: 1.12;
   color: var(--text-light);
   margin-bottom: 18px;
+  overflow-wrap: break-word;
 }
 
 .hero-title em {
@@ -356,12 +377,14 @@ input {
   color: var(--gold);
   font-size: 1.15rem;
   letter-spacing: 2px;
+  flex-shrink: 0;
 }
 
 .rating-info {
   display: flex;
   flex-direction: column;
   font-size: 0.85rem;
+  min-width: 0;
 }
 
 .rating-info strong {
@@ -373,9 +396,10 @@ input {
   font-size: 0.8rem;
 }
 
-/* Coluna Direita — Card do Consultório mais alto, mais estreito e com respiro à direita */
+/* Coluna Direita — Card do Consultório */
 .hero-media {
   width: 100%;
+  min-width: 0;
   display: flex;
   justify-content: flex-end;
 }
@@ -435,9 +459,10 @@ input {
 }
 
 /* ==========================================================================
-   SEÇÕES GERAIS (ALTERNÂNCIA OFF-WHITE #FAFAFA E PRETO FOSCO #111111)
+   SEÇÕES GERAIS
    ========================================================================== */
 .section {
+  width: 100%;
   padding: 96px 0;
 }
 
@@ -473,7 +498,7 @@ input {
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.1rem, 3.2vw, 2.9rem);
+  font-size: clamp(1.9rem, 3.2vw, 2.9rem);
   font-weight: 600;
   line-height: 1.15;
   margin-bottom: 14px;
@@ -493,11 +518,12 @@ input {
    ========================================================================== */
 .specialties-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 
 .specialty-card {
+  min-width: 0;
   background: var(--bg-white);
   border: 1px solid var(--border-light);
   border-radius: 16px;
@@ -584,6 +610,7 @@ input {
    4. MÓDULO INTERATIVO DE AGENDAMENTO
    ========================================================================== */
 .booking-widget {
+  width: 100%;
   background: var(--bg-dark-card);
   border: 1px solid var(--gold-border);
   border-radius: 20px;
@@ -593,8 +620,12 @@ input {
 
 .booking-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr 0.95fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 0.95fr);
   gap: 32px;
+}
+
+.booking-step {
+  min-width: 0;
 }
 
 .step-label {
@@ -609,6 +640,7 @@ input {
   font-size: 1.38rem;
   font-weight: 600;
   color: var(--text-light);
+  line-height: 1.2;
 }
 
 .step-label small {
@@ -616,6 +648,7 @@ input {
   font-size: 0.78rem;
   font-weight: 400;
   color: var(--gold);
+  display: inline-block;
 }
 
 .step-number {
@@ -640,13 +673,14 @@ input {
 /* Procedimentos */
 .procedure-options {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
 .procedure-pill {
   position: relative;
   cursor: pointer;
+  min-width: 0;
 }
 
 .procedure-pill input {
@@ -679,12 +713,13 @@ input {
 /* Dias úteis rápidos */
 .weekday-pills {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
   margin-bottom: 12px;
 }
 
 .day-pill {
+  min-width: 0;
   background: #1F1F1F;
   border: 1px solid var(--border-dark);
   border-radius: 10px;
@@ -704,7 +739,7 @@ input {
 
 .day-pill .day-num {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   margin-top: 2px;
 }
@@ -742,7 +777,8 @@ input {
 /* Grade de Horários */
 .slots-legend {
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 14px;
   font-size: 0.78rem;
   color: var(--text-muted-dark);
   margin-bottom: 14px;
@@ -777,11 +813,12 @@ input {
 
 .time-slots-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 9px;
 }
 
 .slot-btn {
+  min-width: 0;
   padding: 10px 6px;
   border-radius: 8px;
   font-size: 0.84rem;
@@ -837,6 +874,7 @@ input {
 
 .form-control {
   width: 100%;
+  max-width: 100%;
   padding: 12px 14px;
   border-radius: 8px;
   background: #1D1D1D;
@@ -867,7 +905,8 @@ input {
 .summary-row {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .summary-row span {
@@ -940,11 +979,12 @@ input {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
 .testimonial-card {
+  min-width: 0;
   background: var(--bg-white);
   border: 1px solid var(--border-light);
   border-radius: 16px;
@@ -959,6 +999,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   margin-bottom: 16px;
 }
 
@@ -1003,6 +1044,7 @@ input {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--gold);
+  flex-shrink: 0;
 }
 
 .testimonial-author strong {
@@ -1025,9 +1067,14 @@ input {
 
 .location-grid {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 48px;
   align-items: center;
+}
+
+.location-info,
+.map-wrapper {
+  min-width: 0;
 }
 
 .location-desc {
@@ -1129,11 +1176,13 @@ input {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 .footer-logo {
   height: 38px;
   width: auto;
+  flex-shrink: 0;
 }
 
 .footer-brand strong {
@@ -1158,8 +1207,8 @@ input {
    ========================================================================== */
 .whatsapp-toast {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  right: 20px;
+  bottom: 20px;
   width: min(390px, calc(100vw - 32px));
   background: #181818;
   border: 1px solid var(--gold);
@@ -1204,6 +1253,7 @@ input {
   border-radius: 50%;
   background: #25D366;
   box-shadow: 0 0 8px #25D366;
+  flex-shrink: 0;
 }
 
 .toast-close {
@@ -1261,15 +1311,15 @@ input {
 }
 
 /* ==========================================================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE (TABLET & MOBILE)
    ========================================================================== */
 @media (max-width: 1120px) {
   .specialties-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .booking-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -1278,17 +1328,24 @@ input {
     position: fixed;
     top: var(--header-height);
     left: 0;
+    right: 0;
     width: 100%;
     background: #111111;
     border-bottom: 1px solid var(--gold-border);
     flex-direction: column;
     padding: 24px;
     gap: 18px;
-    transform: translateY(-130%);
-    transition: transform var(--transition);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
   }
 
   .main-nav.open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
@@ -1296,11 +1353,15 @@ input {
     display: flex;
   }
 
+  .hero {
+    min-height: auto;
+    align-items: flex-start;
+  }
+
   .hero-fluid-wrapper {
-    grid-template-columns: 1fr;
-    padding-left: 24px;
-    padding-right: 24px;
-    gap: 36px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 28px 20px 48px;
+    gap: 32px;
   }
 
   .hero-media {
@@ -1311,30 +1372,128 @@ input {
     max-width: 480px;
   }
 
+  .clinic-image-frame {
+    max-height: 420px;
+  }
+
   .clinic-photo {
-    height: 440px;
+    height: 400px;
+    max-height: 420px;
   }
 
   .testimonials-grid,
   .location-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
   }
 }
 
-@media (max-width: 540px) {
-  .specialties-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 640px) {
+  .section {
+    padding: 68px 0;
   }
 
-  .time-slots-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .booking-widget {
-    padding: 22px 18px;
+  .container {
+    padding: 0 18px;
   }
 
   .header-actions .btn {
     display: none;
+  }
+
+  .brand-logo {
+    height: 36px;
+  }
+
+  .brand-name {
+    font-size: 1.18rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 7.5vw, 2.45rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .clinic-image-frame {
+    max-height: 340px;
+  }
+
+  .clinic-photo {
+    height: 320px;
+    max-height: 340px;
+  }
+
+  .clinic-card-footer {
+    padding: 14px 18px;
+  }
+
+  .specialties-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .booking-widget {
+    padding: 22px 16px;
+  }
+
+  .booking-summary-box {
+    padding: 18px 14px;
+  }
+
+  .time-slots-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .weekday-pills {
+    gap: 5px;
+  }
+
+  .day-pill {
+    padding: 8px 2px;
+  }
+
+  .day-pill .day-num {
+    font-size: 0.82rem;
+  }
+
+  .google-score-card {
+    width: 100%;
+    padding: 16px 18px;
+  }
+
+  .map-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 380px) {
+  .google-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .procedure-options {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .time-slots-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
